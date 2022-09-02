@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 
-import NftCard from "../Nft-card/NftCard";
+import NftCard from "../Nft-card/NftCard2";
 import { NFT__DATA } from "../../../assets/data/data.js";
 
 import "./live-auction.css";

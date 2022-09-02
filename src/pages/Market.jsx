@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import CommonSection from "../components/ui/Common-section/CommonSection";
 
-import NftCard from "../components/ui/Nft-card/NftCard";
+import NftCard from "../components/ui/Nft-card/NftCard2";
 
 import { NFT__DATA } from "../assets/data/data";
 

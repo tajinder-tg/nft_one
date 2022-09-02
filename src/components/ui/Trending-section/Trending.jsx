@@ -4,7 +4,7 @@ import { Container, Row, Col } from "reactstrap";
 import { NFT__DATA } from "../../../assets/data/data";
 import "./trending.css";
 
-import NftCard from "../Nft-card/NftCard";
+import NftCard from "../Nft-card/NftCard2";
 
 const Trending = () => {
   return (

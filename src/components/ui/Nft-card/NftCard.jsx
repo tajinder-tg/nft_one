@@ -7,18 +7,24 @@ import Modal from "../Modal/Modal";
 
 const NftCard = (props) => {
   const { title, id, currentBid, creatorImg, imgUrl, creator } = props.item;
-
   const [showModal, setShowModal] = useState(false);
-
+  const { formInput } = props;
+  console.log("form", formInput);
   return (
     <div className="single__nft__card">
       <div className="nft__img">
-        <img src={imgUrl} alt="" className="w-100" />
+        <img
+          src={props.file[0] ? URL.createObjectURL(props.file[0]) : imgUrl}
+          alt=""
+          className="w-100"
+        />
       </div>
 
       <div className="nft__content">
         <h5 className="nft__title">
-          <Link to={`/market/${id}`}>{title}</Link>
+          <Link to={`/market/${id}`}>
+            {formInput.name ? formInput.name : "Enter Tittle"}
+          </Link>
         </h5>
 
         <div className="creator__info-wrapper d-flex gap-3">
@@ -34,7 +40,7 @@ const NftCard = (props) => {
 
             <div>
               <h6>Current Bid</h6>
-              <p>{currentBid} ETH</p>
+              <p>{formInput.price ? formInput.price : 0.01} ETH</p>
             </div>
           </div>
         </div>
